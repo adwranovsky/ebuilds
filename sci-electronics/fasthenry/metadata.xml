@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>alex@wranovsky.org</email>
+</maintainer>
+<longdescription lang="en">
+This is a modified version of the fasthenry three dimensional inductance computation program which handles superconducting conductors. This is a source code distribution for Unix/Linux and Windows (mingw).
+</longdescription>
+</pkgmetadata>
