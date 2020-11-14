@@ -37,7 +37,7 @@ PATCHES=(
 
 src_configure() {
 	local mycmakeargs=(
-		-DFPARSER_ROOT_DIR="/usr/share/fparser"
+		-DFPARSER_ROOT_DIR="${EPREFIX}/usr/share/fparser"
 	)
 	cmake_src_configure
 }
