@@ -14,14 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="
+DEPEND="
 	dev-libs/tinyxml
 	dev-libs/boost
 	sci-libs/hdf5
 	sci-libs/vtk
 	sci-mathematics/cgal
 "
+RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-libs/fparser
 "
