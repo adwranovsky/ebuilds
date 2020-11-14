@@ -1,0 +1,38 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 898f280..a86d1c0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -75,14 +75,9 @@ SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${openEMS_SOURCE_DIR}/cmake/Modules/
+ # fparser
+ # $ cmake -D FPARSER_ROOT_DIR=~/opt/openEMS .
+ # SET(FPARSER_ROOT_DIR ~/opt/openEMS)
+-find_library(fparser_LIBRARIES 
+-  NAMES fparser
+-  HINTS ${FPARSER_ROOT_DIR}/lib${LIB_SUFFIX}
+-  NO_CMAKE_FIND_ROOT_PATH
+-)
+-message(STATUS "fparser: ${fparser_LIBRARIES}" )
++set(FPARSER_SOURCES ${FPARSER_ROOT_DIR}/fparser.cc ${FPARSER_ROOT_DIR}/fpoptimizer.cc)
+ #TODO test if fparser was found
+-INCLUDE_DIRECTORIES( ${FPARSER_ROOT_DIR}/include ) 
++INCLUDE_DIRECTORIES( ${FPARSER_ROOT_DIR} ) 
+ 
+ # CSXCAD
+ # $ cmake -D CSXCAD_ROOT_DIR=~/opt/openEMS .
+@@ -152,7 +147,7 @@ INCLUDE_DIRECTORIES (${VTK_INCLUDE_DIR})
+ ADD_SUBDIRECTORY( nf2ff )
+ 
+ set(SOURCES
+-  openems.cpp
++  openems.cpp ${FPARSER_SOURCES}
+ )
+ 
+ set(PUB_HEADERS openems.h)
+@@ -177,7 +172,6 @@ add_library( openEMS SHARED ${SOURCES})
+ set_target_properties(openEMS PROPERTIES VERSION ${LIB_VERSION_STRING} SOVERSION ${LIB_VERSION_MAJOR})
+ TARGET_LINK_LIBRARIES( openEMS
+   ${CSXCAD_LIBRARIES}
+-  ${fparser_LIBRARIES}
+   tinyxml
+   ${HDF5_LIBRARIES}
+   ${HDF5_HL_LIBRARIES}
