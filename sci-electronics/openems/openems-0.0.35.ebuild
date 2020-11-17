@@ -12,7 +12,7 @@ SRC_URI="https://github.com/thliebig/openEMS/archive/v${PV}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="mpi"
 
 DEPEND="
 	sci-libs/csxcad
@@ -22,6 +22,7 @@ DEPEND="
 	dev-libs/boost
 	sci-mathematics/cgal
 	sys-libs/zlib
+	mpi? (virtual/mpi)
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
@@ -40,6 +41,7 @@ PATCHES=(
 src_configure() {
 	local mycmakeargs=(
 		-DFPARSER_ROOT_DIR="${EPREFIX}/usr/share/fparser"
+		-DWITH_MPI="$(usex mpi 1 0)"
 	)
 	cmake_src_configure
 }
