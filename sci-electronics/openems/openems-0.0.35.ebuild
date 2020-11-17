@@ -22,7 +22,7 @@ DEPEND="
 	dev-libs/boost
 	sci-mathematics/cgal
 	sys-libs/zlib
-	mpi? (virtual/mpi)
+	mpi? ( virtual/mpi )
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
