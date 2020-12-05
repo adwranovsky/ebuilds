@@ -23,6 +23,6 @@ S="${WORKDIR}"
 src_install() {
 	local install_path="/usr/share/${PN}"
 	dodir "$install_path"
-	cp -r -t "${D}/${install_path}" *.cc *.hh extrasrc mpfr examples || die "Install failed!"
+	cp -r -t "${ED}/${install_path}" *.cc *.hh extrasrc mpfr examples || die "Install failed!"
 	einstalldocs
 }
