@@ -21,6 +21,7 @@ DEPEND="
 	sci-libs/vtk
 	dev-libs/boost
 	sci-mathematics/cgal
+	sci-mathematics/octave
 	sys-libs/zlib
 	mpi? ( virtual/mpi )
 "
@@ -44,4 +45,12 @@ src_configure() {
 		-DWITH_MPI="$(usex mpi 1 0)"
 	)
 	cmake_src_configure
+}
+
+src_compile() {
+	current_path="$(pwd)"
+	cd ./matlab
+	mkoctfile -lhdf5 h5readatt_octave.cc
+	cd "${current_path}"
+	cmake_src_compile
 }
