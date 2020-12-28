@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>alex@wranovsky.org</email>
+		<name>Alex Wranovsky</name>
+	</maintainer>
+	<longdescription>
+        You can use this software to convert KiCAD PCB files to Octave function
+        files. Then call from Octave script to import model into openEMS
+        structures. pcbmodelgen also generates Octave function file with model
+        mesh lines. You can use them as is or modify before adding to simulation
+        structure.
+	</longdescription>
+</pkgmetadata>
