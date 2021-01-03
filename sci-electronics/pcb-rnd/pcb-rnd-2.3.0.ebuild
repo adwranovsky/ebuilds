@@ -28,7 +28,6 @@ src_configure() {
 		--CFLAGS="${CFLAGS}" \
 		--LDFLAGS="${LDFLAGS}" \
 		$([[ -n $CTARGET ]] && echo -n "--target=${CTARGET}") \
-		--dot_pcb_rnd="" \
 	|| die
 
 	# Install docs to a better location. This could probably done more cleanly
