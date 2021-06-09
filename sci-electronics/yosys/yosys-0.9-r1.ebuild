@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{4,5,6,7} )
+PYTHON_COMPAT=( python3_{4,5,6,7,8,9} )
 inherit eutils python-any-r1
 
 # Be sure to keep this up to date with the Makefile
