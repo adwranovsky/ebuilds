@@ -18,8 +18,10 @@ DEPEND="x11-libs/motif"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+# Do a dumb configuration that enables all working plugins
 src_configure() {
 	./configure \
+		--all=plugin \
 		--prefix="${EPREFIX}/usr" \
 		--man1dir="${EPREFIX}/share/man" \
 		--libarchdir="$(get_libdir)" \
