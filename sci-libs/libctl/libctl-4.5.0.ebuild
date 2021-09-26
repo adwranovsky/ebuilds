@@ -10,8 +10,16 @@ SRC_URI="https://github.com/NanoComp/libctl/releases/download/v${PV}/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples static-libs"
+IUSE="doc examples"
 
 DEPEND="
 	dev-scheme/guile"
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	# Compiled as a shared library by default
+	local myeconfargs=(
+		--enable-shared
+	)
+	econf "${myeconfargs[@]}"
+}
