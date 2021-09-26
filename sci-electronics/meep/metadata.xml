@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>alex@wranovsky.org</email>
+		<name>Alex Wranovsky</name>
+	</maintainer>
+	<upstream>
+		<doc lang="en">https://meep.readthedocs.io/en/latest/</doc>
+		<bugs-to>https://github.com/NanoComp/meep/issues</bugs-to>
+	</upstream>
+	<longdescription lang="en">
+        Meep implements the finite-difference time-domain (FDTD) method for
+        computational electromagnetics. This is a widely used technique in which
+        space is divided into a discrete grid and the fields are evolved in time
+        using discrete time steps — as the grid and the time steps are made
+        finer and finer, this becomes a closer and closer approximation for the
+        true continuous equations, and one can simulate many practical problems
+        essentially exactly.
+	</longdescription>
+	<use>
+		<flag name="scripting">Build with Python and Scheme scripting interfaces</flag>
+		<flag name="mpi">Build with MPI support for multiprocessing</flag>
+		<flag name="openmp">Build with experimental OpenMP support for multithreading</flag>
+	</use>
+</pkgmetadata>
