@@ -3,21 +3,18 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{4,5,6,7,8,9} )
+PYTHON_COMPAT=( python3_{4,5,6,7,8,9,10} )
 inherit eutils python-any-r1
 
-# Be sure to keep this up to date with the Makefile
-ABC_HASH="ae6716b064c842f45109a88e84dca71fe4cc311f"
-
-# Yosys git hash for this version
-YOSYS_HASH="b0004911ca15ec41db56c76c83461061fedc742e"
+# Update this every time the version is bumped
+ABC_HASH="09a7e6dac739133a927ae7064d319068ab927f90"
 
 DESCRIPTION="Yosys - Yosys Open SYnthesis Suite"
-HOMEPAGE="http://www.clifford.at/icestorm/"
+HOMEPAGE="https://yosyshq.net/yosys/"
 LICENSE="ISC"
 SRC_URI="
-	https://github.com/YosysHQ/yosys/archive/${YOSYS_HASH}.zip -> ${P}.zip
-	https://github.com/berkeley-abc/abc/archive/${ABC_HASH}.tar.gz -> berkeley-abc-${ABC_HASH}.tar.gz
+	https://github.com/YosysHQ/${PN}/archive/${P}.tar.gz
+	https://github.com/YosysHQ/abc/archive/${ABC_HASH}.zip
 "
 
 SLOT="0"
@@ -39,7 +36,7 @@ DEPEND="
 	virtual/pkgconfig
 	${RDEPEND}"
 
-S="${WORKDIR}/${PN}-${YOSYS_HASH}"
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
 	ln -s ${WORKDIR}/abc-${ABC_HASH} abc
