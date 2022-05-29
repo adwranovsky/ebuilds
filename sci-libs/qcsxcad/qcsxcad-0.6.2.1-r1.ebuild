@@ -29,7 +29,7 @@ IUSE=""
 DEPEND="
 	>=dev-qt/qtwidgets-5.15.1
 	>=dev-qt/qtxml-5.15.1
-	<sci-libs/vtk-9.0.1[qt5,rendering]
+	>sci-libs/vtk-9.0.1[qt5,rendering]
 	sci-libs/csxcad
 "
 RDEPEND="${DEPEND}"
