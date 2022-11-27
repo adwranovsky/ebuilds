@@ -2,12 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>vowstar@gmail.com</email>
-		<name>Huang Rui</name>
-	</maintainer>
-	<maintainer type="project">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
+		<name>Alex Wranovsky</name>
+		<email>alex@wranovsky.org</email>
 	</maintainer>
 	<longdescription>
 	Verilator, the fastest free Verilog HDL simulator.
@@ -16,4 +12,9 @@
 	Compiles into multithreaded C++, SystemC, or (soon) C++-under-Python
 	Creates XML to front-end your own tools
 	</longdescription>
+	<use>
+		<flag name="ccache">
+		Enables run time support for ccache e.g. caching verilator output for large Verilog/SystemVerilog projects.
+		</flag>
+	</use>
 </pkgmetadata>
