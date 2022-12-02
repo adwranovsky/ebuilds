@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Alex Wranovsky</name>
+		<email>alex@wranovsky.org</email>
+	</maintainer>
+	<longdescription>
+	Yosys is a framework for Verilog RTL synthesis. It currently has
+	extensive Verilog-2005 support and provides a basic set of synthesis
+	algorithms for various application domains.
+	</longdescription>
+	<use>
+		<flag name="abc">
+		Enables support for the ABC logic analyzer and optimizer.
+		</flag>
+	</use>
+</pkgmetadata>
+
