@@ -27,6 +27,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
+	dev-embedded/libftdi
 "
 
 src_prepare() {
