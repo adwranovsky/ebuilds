@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Alex Wranovsky</name>
+		<email>alex@wranovsky.org</email>
+	</maintainer>
+	<longdescription>
+	Project IceStorm aims at documenting the bitstream format of Lattice iCE40
+	FPGAs and providing simple tools for analyzing and creating bitstream files.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">YosysHQ/icestorm</remote-id>
+	</upstream>
+</pkgmetadata>
+
+
