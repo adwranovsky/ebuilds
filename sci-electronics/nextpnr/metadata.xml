@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Alex Wranovsky</name>
+		<email>alex@wranovsky.org</email>
+	</maintainer>
+	<longdescription>
+	Nextpnr is a placement, routing, and bitstream generation tool that together with Yosys forms a free and open source
+	software architecture-neutral FPGA framework. Currently, this flow supports two commercially available FPGA
+	families, Lattice iCE40 (up to 8K logic elements) and Lattice ECP5 (up to 85K elements) and has been
+	hardware-proven for custom-computing machines including a low-power neural-network accelerator and an Open- RISC
+	system-on-chip capable of booting Linux. Both Yosys and nextpnr have been engineered in a highly flexible manner
+	to support many of the features present in modern FPGAs by separating architecture-specific details from the
+	common mapping algorithms. This framework is demonstrated on a longest-path case study to find an atypical
+	single source-sink path occupying up to 45% of all on-chip wiring
+	</longdescription>
+	<use>
+		<flag name="gui">
+		Builds a Qt5 GUI
+		</flag>
+		<flag name="analytic-placer">
+		Build the HeAP analytic placer
+		</flag>
+		<flag name="ice40">
+		Add support for Lattice iCE40 devices via Project Icestorm
+		</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">YosysHQ/nextpnr</remote-id>
+	</upstream>
+</pkgmetadata>
+
